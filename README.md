@@ -95,6 +95,14 @@ pytest -q
 - [anduril-lattice-rest-winhttp](https://github.com/Polybolos-Institute/anduril-lattice-rest-winhttp)
 - [anduril-lattice-sandbox-dx](https://github.com/Polybolos-Institute/anduril-lattice-sandbox-dx)
 
+## Beyond this open foundation
+
+This repository is MIT open foundation.
+
+Production contested / denied-comms C2 needs more: adaptive track-state estimation, pursuit-evasion geometry, decision authority, and operator HOTL. Those layers stay proprietary at Polybolos Institute.
+
+Integration inquiries: mark.brown@polybolos.org · https://www.polybolos.org
+
 ## License
 
 MIT - see [LICENSE](LICENSE).
