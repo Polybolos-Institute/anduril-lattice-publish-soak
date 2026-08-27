@@ -1,0 +1,23 @@
+name: anduril-lattice-publish-soak CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch mock Lattice
+        run: |
+          git clone --depth 1 https://github.com/Polybolos-Institute/anduril-mock-lattice.git ../anduril-mock-lattice
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-dev.txt
+      - run: pytest -q
+      - name: Soak 1000 (mock)
+        run: python -m soak --target mock --n 1000 --progress-every 250 --pretty
